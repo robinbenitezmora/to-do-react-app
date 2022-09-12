@@ -1,26 +1,30 @@
+/*eslint-disable*/
 import React, { Component } from 'react';
 
 class InputTodo extends Component {
   state = {
-    title: ''
+    title: '',
   };
-  onChange = e => {
+
+  onChange = (e) => {
     this.setState({
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
-  handleSubmit = e => {
+
+  handleSubmit = (e) => {
     e.preventDefault();
     if (this.state.title.trim()) {
       this.props.addTodoProps(this.state.title);
       this.setState({
-        title: ''
+        title: '',
       });
     } else {
       alert('Please write item');
     }
   };
-  render () {
+
+  render() {
     return (
       <form onSubmit={this.handleSubmit}>
         <input
@@ -30,7 +34,7 @@ class InputTodo extends Component {
           name="title"
           onChange={this.onChange}
         />
-        <button>Submit</button>
+        <button type="submit">Submit</button>
       </form>
     );
   }
