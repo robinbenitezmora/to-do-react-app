@@ -1,12 +1,14 @@
-/*eslint-disable*/
 import React from 'react';
 
-const Header = () => {
-  return (
-    <div>
-      <h1>Header</h1>
-    </div>
-  );
-};
+const Header = () => (
+  <header className="header">
+    <h1>todos</h1>
+    <input
+      className="new-todo"
+      placeholder="What needs to be done?"
+      onKeyUp="handleInput"
+    />
+  </header>
+);
 
 export default Header;
