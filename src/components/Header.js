@@ -1,13 +1,8 @@
 import React from 'react';
 
 const Header = () => (
-  <header className="header">
-    <h1>todos</h1>
-    <input
-      className="new-todo"
-      placeholder="What needs to be done?"
-      onKeyUp="handleInput"
-    />
+  <header>
+    <h1>Todo List</h1>
   </header>
 );
 
